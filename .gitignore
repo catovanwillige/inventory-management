@@ -53,3 +53,6 @@ logs/
 
 # Environment variables
 .env
+
+# Playwright MCP screenshots/output
+.playwright-mcp/

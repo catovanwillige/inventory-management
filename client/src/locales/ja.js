@@ -6,6 +6,7 @@ export default {
     orders: '注文',
     finance: '財務',
     demandForecast: '需要予測',
+    restocking: '補充発注',
     companyName: '触媒コンポーネンツ',
     subtitle: '在庫管理システム'
   },
@@ -112,6 +113,20 @@ export default {
     onTimeDelivery: '定時配達',
     itemsCount: '{count}件',
     quantity: '数量',
+    // Restock orders submitted from the Restocking page
+    submitted: {
+      title: '発注済み注文',
+      empty: '発注済みの補充注文はまだありません',
+      orderId: '注文ID',
+      submittedDate: '発注日',
+      items: '品目',
+      total: '合計',
+      leadTime: 'リードタイム',
+      expectedDelivery: '予定配達日',
+      status: 'ステータス',
+      statusSubmitted: '発注済み',
+      days: '{days}日'
+    },
     table: {
       orderNumber: '注文番号',
       orderId: '注文ID',
@@ -216,6 +231,51 @@ export default {
     decreasing: '減少'
   },
 
+  // 補充発注
+  restocking: {
+    title: '補充発注',
+    description: '需要と在庫状況に基づく優先順位で、予算内の補充発注を計画します',
+    stats: {
+      budget: '予算',
+      selectedTotal: '選択合計',
+      remaining: '残額',
+      itemsSelected: '選択品目数'
+    },
+    budgetCard: {
+      title: '補充予算',
+      sliderLabel: '予算スライダー',
+      inputLabel: '予算の金額を直接入力',
+      hint: '推奨品目は緊急度の高い順に、予算を使い切るまで選択されます。'
+    },
+    selectRecommended: '推奨品目を選択',
+    placeOrder: '発注する',
+    submitting: '送信中...',
+    overBudget: '選択した品目が予算を{amount}超過しています。選択を減らすか予算を増やしてください。',
+    success: '注文{id}を発注しました。合計{total}、配達予定日{date}。',
+    viewOrders: '発注済み注文を見る',
+    loadFailed: '補充推奨の読み込みに失敗しました: {message}',
+    submitFailed: '発注に失敗しました',
+    tableTitle: '補充推奨',
+    empty: '補充推奨はありません',
+    badges: {
+      recommended: '推奨',
+      ordered: '発注済み'
+    },
+    table: {
+      select: '選択',
+      item: '品目',
+      category: 'カテゴリ',
+      trend: 'トレンド',
+      stockOnHand: '現在庫',
+      forecastedDemand: '予測需要',
+      quantity: '数量',
+      unitCost: '単価',
+      lineCost: '小計',
+      leadTime: 'リードタイム'
+    },
+    days: '{days}日'
+  },
+
   // Priority
   priority: {
     high: '高',
@@ -229,7 +289,8 @@ export default {
     sensors: 'センサー',
     actuators: 'アクチュエータ',
     controllers: 'コントローラー',
-    powerSupplies: '電源'
+    powerSupplies: '電源',
+    mechanicalComponents: '機械部品'
   },
 
   // Spending Categories
