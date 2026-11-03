@@ -6,6 +6,7 @@ export default {
     orders: 'Orders',
     finance: 'Finance',
     demandForecast: 'Demand Forecast',
+    restocking: 'Restocking',
     companyName: 'Catalyst Components',
     subtitle: 'Inventory Management System'
   },
@@ -112,6 +113,20 @@ export default {
     onTimeDelivery: 'On-Time Delivery',
     itemsCount: '{count} items',
     quantity: 'Qty',
+    // Restock orders submitted from the Restocking page
+    submitted: {
+      title: 'Submitted Orders',
+      empty: 'No restock orders have been submitted yet',
+      orderId: 'Order ID',
+      submittedDate: 'Submitted',
+      items: 'Items',
+      total: 'Total',
+      leadTime: 'Lead Time',
+      expectedDelivery: 'Expected Delivery',
+      status: 'Status',
+      statusSubmitted: 'Submitted',
+      days: '{days} days'
+    },
     table: {
       orderNumber: 'Order Number',
       orderId: 'Order ID',
@@ -216,6 +231,51 @@ export default {
     decreasing: 'decreasing'
   },
 
+  // Restocking
+  restocking: {
+    title: 'Restocking',
+    description: 'Plan a restock order within your budget, prioritised by demand and stock levels',
+    stats: {
+      budget: 'Budget',
+      selectedTotal: 'Selected Total',
+      remaining: 'Remaining',
+      itemsSelected: 'Items Selected'
+    },
+    budgetCard: {
+      title: 'Restock Budget',
+      sliderLabel: 'Budget slider',
+      inputLabel: 'Exact budget amount',
+      hint: 'Recommended items are filled by urgency until the budget is used up.'
+    },
+    selectRecommended: 'Select Recommended',
+    placeOrder: 'Place Order',
+    submitting: 'Submitting...',
+    overBudget: 'The selected items exceed the budget by {amount}. Reduce the selection or raise the budget.',
+    success: 'Order {id} placed. Total {total}, expected delivery {date}.',
+    viewOrders: 'View submitted orders',
+    loadFailed: 'Failed to load restock recommendations: {message}',
+    submitFailed: 'Failed to place order',
+    tableTitle: 'Restock Recommendations',
+    empty: 'No restock recommendations available',
+    badges: {
+      recommended: 'Recommended',
+      ordered: 'Ordered'
+    },
+    table: {
+      select: 'Select',
+      item: 'Item',
+      category: 'Category',
+      trend: 'Trend',
+      stockOnHand: 'Stock on Hand',
+      forecastedDemand: 'Forecasted Demand',
+      quantity: 'Quantity',
+      unitCost: 'Unit Cost',
+      lineCost: 'Line Cost',
+      leadTime: 'Lead Time'
+    },
+    days: '{days} days'
+  },
+
   // Priority
   priority: {
     high: 'High',
@@ -229,7 +289,8 @@ export default {
     sensors: 'Sensors',
     actuators: 'Actuators',
     controllers: 'Controllers',
-    powerSupplies: 'Power Supplies'
+    powerSupplies: 'Power Supplies',
+    mechanicalComponents: 'Mechanical Components'
   },
 
   // Spending Categories

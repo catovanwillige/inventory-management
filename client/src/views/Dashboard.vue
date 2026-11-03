@@ -529,19 +529,10 @@ export default {
         }
       })
 
-      // Convert to array, sort by first order date (earliest first = January at top), then by revenue, and take top 12
+      // The card is titled "Top Products by Revenue", so rank by revenue (highest first)
+      // and take the top 12. Previously this sorted by first order date.
       return Object.values(productMap)
-        .sort((a, b) => {
-          // Sort by first order date (earliest first)
-          // This ensures products first ordered in January appear before those first ordered in December
-          const dateA = new Date(a.firstOrderDate || '9999-12-31')
-          const dateB = new Date(b.firstOrderDate || '9999-12-31')
-          if (dateA.getTime() !== dateB.getTime()) {
-            return dateA.getTime() - dateB.getTime() // Earlier dates come first
-          }
-          // If dates are equal, sort by revenue (highest first)
-          return b.revenue - a.revenue
-        })
+        .sort((a, b) => b.revenue - a.revenue)
         .slice(0, 12)
     })
 
